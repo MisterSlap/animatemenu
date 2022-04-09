@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(196, 189, 189);
+    color: #000;
+    transition: .5s background-color;
+}
+
+
+
+.dark {
+    background: rgb(20, 20, 20);
+    color: #fff;
+}
+
+.side {
+    position: fixed;
+    display: sticky;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    text-align: center;
+    margin: 5px -20px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+.container-menu {
+    padding: 0;
+    width: 800px;
+    max-width: 500px;
+    margin: 0em auto;
+    text-align: center;
+}
+.container {
+    padding: 1em;
+    width: 800px;
+    background: rgb(236, 225, 225);
+    margin: 5em auto;
+    padding-top: 20px;
+    text-align: center;
+    transition: .5s background-color;
+}
+
+.dark .container{
+    
+    background: rgb(39, 38, 44);
+}
+
+a {
+    color: rgb(21, 97, 97);
+    text-decoration: none;
+}
+
+.dark a {color: rgb(198, 176, 235);}
+
+ul {
+    margin: 0px auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.menu a {
+    background: #999999;
+    color: rgb(71, 59, 104);
+    padding: 10px;
+    display: block;
+    /* border-bottom: 1px solid #666; */
+    transition: .5s all;
+    max-height: 100%;
+    
+}
+
+.dark .menu a{
+    background: #3d3d3d;
+    color: rgb(157, 141, 201);
+    
+}
+
+.menu a:hover{
+    background: #666;
+    padding: 10px 10px 10px 10px;
+    
+}
+
+.menu li:first-child a{
+    border-radius: 5px 0px 0px 5px;
+}
+
+.menu li .menu__drop li:first-child a{
+    border-radius: 5px 5px 0px 0px;
+}
+
+
+.menu li:last-child a{
+    border-radius: 0px 5px 5px 0px;
+    border-bottom: 0;
+}
+
+.menu li .menu__drop li:last-child a{
+    border-radius: 0px 0px 5px 5px;
+    border-bottom: 0;
+}
+
+
+.menu li .menu__drop li a {
+    border-radius: 0;
+    border-bottom: 1px solid #666;
+}
+
+/*Всплывающее меню*/
+.menu__list {
+    position: relative;
+    
+}
+
+.menu__drop {
+    position: absolute;
+    display: block;
+    min-width: 140px;
+    max-width: 300px;
+    width: 100%;
+    /* bottom: 0; */
+    top: -999em;
+    opacity: 0;
+    border-top: 5px solid transparent;
+    
+    transition: .5s opacity;
+}
+
+.menu__list:hover .menu__drop {
+    opacity: 1;
+    top: 38px;
+    
+}
+
+/*иконки менюшечки*/
+.menu__list::after{
+    content: " ";
+    position: absolute;
+    border: 8px solid;
+    transform: scaleY(-1);
+    border-color: transparent  transparent #666;
+    top: 75%;
+    right: 15%;
+    transition: .5s all;
+    
+}
+
+.menu__list:hover::after{
+    transform: scaleY(1);
+    opacity: 0;
+}

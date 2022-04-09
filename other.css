@@ -1,0 +1,15 @@
+.socials {
+    /* background: black; */
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 80%;
+    text-align: left;
+    display: flex;
+    justify-content:space-between;
+}
+
+.socials img {
+    align-items: center;
+    margin: 0px 0px;
+}
+
